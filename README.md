@@ -28,10 +28,10 @@ Turning a switch on and off:
 
 ```elixir-lang
 living_room = Wemo.Switch.find_by_name("Living Room")
-Switch.on(living_room)
+Wemo.Switch.on(living_room)
 => {:ok, 1}
 
-Switch.off(living_room)
+Wemo.Switch.off(living_room)
 => {:ok, 0}
 ```
 
@@ -46,4 +46,11 @@ Wemo.Switch.off?(living_room)
 
 Wemo.Switch.status(living_room)
 => 1
+```
+
+Checking the current draw of a switch (for switches like WeMo Insight that support this functionality):
+
+```elixir-lang
+Wemo.Switch.current_draw(living_room)
+=> 92170
 ```
