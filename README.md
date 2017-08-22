@@ -28,10 +28,10 @@ Turning a switch on and off:
 
 ```elixir-lang
 living_room = Wemo.Switch.find_by_name("Living Room")
-Switch.on(living_room)
+Wemo.Switch.on(living_room)
 => {:ok, 1}
 
-Switch.off(living_room)
+Wemo.Switch.off(living_room)
 => {:ok, 0}
 ```
 
